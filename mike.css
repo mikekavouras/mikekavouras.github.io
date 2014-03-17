@@ -21,6 +21,14 @@ body {
   margin-bottom: 0px;
 }
 
+h3 a {
+  color: #484848;
+}
+
+h3 a:hover {
+  color: #777;
+}
+
 /* table */
 table {
   display: block;
