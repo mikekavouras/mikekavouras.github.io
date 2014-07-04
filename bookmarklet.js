@@ -24,7 +24,7 @@ var SeeMe = {
       'display' : 'table'
     });
 
-    var $cell = $('<div></div>');
+    var $cell = $('<div id="seeme-cell"></div>');
     $cell.css({
       'width' : '100%',
       'height' : '100%',
@@ -81,10 +81,17 @@ var SeeMe = {
       if (cb) cb();
     }
     document.getElementsByTagName('body')[0].appendChild(s);
+  },
+
+  appendArrows: function() {
+    var $prev = $('<a href="javascript://">&larr;</a>');
+    var $next = $('<a href="javascript://">&rarr;</a>');
+    $('#seeme-cell').append($prev).append($next);
   }
 };
 
 (function() {
   SeeMe.loadjQuery(SeeMe.init);
+  SeeMe.appendArrows();
 })();
 
