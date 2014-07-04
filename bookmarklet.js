@@ -62,10 +62,21 @@ var SeeMe = {
 
     $('body').append($overlay);
     $('body').append($table);
+  },
+
+  loadjQuery: function(cb) {
+    var s = document.createElement('script');
+    s.setAttribute('type', 'text/javascript');
+    s.setAttribute('charset', 'utf-8');
+    s.setAttribute('src', 'http://code.jquery.com/jquery.latest.min.js');
+    s.onload = function() {
+      if (cb) cb();
+    }
+    document.getElementsByTagName('body')[0].appendChild(s);
   }
 };
 
 (function() {
-  SeeMe.init();
+  SeeMe.loadjQuery(SeeMe.init);
 })();
 
