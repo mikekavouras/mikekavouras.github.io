@@ -56,6 +56,13 @@ var SeeMe = {
     var $images = $('img')
     var $image = $images.first().clone();
 
+    var image = $image[0];
+    $image.css({
+      'position' : 'absolute',
+      'left' : (imageSize.width / 2) - (image.width / 2),
+      'top' : (imageSize.height / 2) - image.height / 2)
+    });
+
     $div.append($image);
     $div.append($(tImage));
     $cell.append($div);
