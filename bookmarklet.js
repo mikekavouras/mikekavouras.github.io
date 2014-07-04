@@ -1,4 +1,6 @@
 function SeeMe() {
+  this.idx = 0;
+  this.images = [];
 }
 
 SeeMe.prototype = {
@@ -57,8 +59,8 @@ SeeMe.prototype = {
       'z-index' : '8000'
     });
 
-    var $images = $('img')
-    var $image = $images.first().clone();
+    this.$images = $('img')
+    var $image = this.$images.first().clone();
 
     var image = $image[0];
     $image.css({
@@ -99,14 +101,43 @@ SeeMe.prototype = {
       'padding' : '10px 20px',
       'color' : '#fff',
       'font-size' : '30px',
-      'margin' : '0px 30px'
+      'margin' : '0px 30px',
+      'text-decoration' : 'none'
     }
 
     $prev.css(styles);
     $next.css(styles);
 
+    var self = this;
+    $prev.bind('click', function() {
+      self.prev();
+    });
+    $next.bind('click', function() {
+      self.next();
+    });
+
     $centered.append($prev).append($next);
     $('#seeme-cell').append($centered);
+  },
+
+  prev: function() {
+    this.idx--;
+    if (this.idx < 0) {
+      this.idx = this.images.length - 1;
+    }
+    to(this.idx);
+  },
+
+  next: function() {
+    this.idx++;
+    if (this.idx > this.images.length - 1) {
+      this.idx = 0;
+    }
+    to(this.idx);
+  },
+
+  to: function(idx) {
+    $('#seeme-cell').find('img').first.replaceWith(this.images[idx]);
   }
 };
 
