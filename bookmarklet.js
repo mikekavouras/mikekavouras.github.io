@@ -39,7 +39,8 @@ var SeeMe = {
       'margin' : '0px auto',
       'width' : imageSize.width,
       'height' : imageSize.height,
-      'position' : 'relative'
+      'position' : 'relative',
+      'overflow' : 'hidden'
     });
 
     var url = "https://static2.see.me/images/masks/tshirt-overlay-front.png.pagespeed.ce.MXzdR3OCN7.png";
