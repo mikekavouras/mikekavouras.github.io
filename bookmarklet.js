@@ -56,12 +56,14 @@ SeeMe.prototype = {
   leftArrow: function() {
     var $prev = $('<a href="javascript://">&larr;</a>');
     var styles = {
-      'display' : 'inline-block',
       'padding' : '10px 20px',
       'color' : '#fff',
       'font-size' : '30px',
-      'margin' : '0px 30px',
-      'text-decoration' : 'none'
+      'text-decoration' : 'none',
+      'position' : 'absolute',
+      'top' : '50%',
+      'margin-top' : '-19px',
+      'left' : '-160px'
     }
     $prev.css(styles);
 
@@ -75,12 +77,14 @@ SeeMe.prototype = {
   rightArrow: function() {
     var $next = $('<a href="javascript://">&rarr;</a>');
     var styles = {
-      'display' : 'inline-block',
       'padding' : '10px 20px',
       'color' : '#fff',
       'font-size' : '30px',
-      'margin' : '0px 30px',
-      'text-decoration' : 'none'
+      'text-decoration' : 'none',
+      'position' : 'absolute',
+      'top' : '50%',
+      'margin-top' : '-19px',
+      'right' : '-160px'
     }
     $next.css(styles);
     $next.bind('click', function() {
