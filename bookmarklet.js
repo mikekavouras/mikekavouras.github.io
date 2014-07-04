@@ -95,7 +95,7 @@ SeeMe.prototype = {
     var $img = $('#seeme-cell').find('img').first();
     var $newImg = this.images[idx];
     $img.replaceWith($newImg);
-    // this.repositionImage($img);
+    this.repositionImage($newImg);
   },
 
   repositionImage: function($image) {
