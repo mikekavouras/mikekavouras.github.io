@@ -73,6 +73,8 @@ SeeMe.prototype = {
 
     $('body').append($overlay);
     $('body').append($table);
+
+    this.appendArrows();
   },
 
   loadjQuery: function(cb) {
@@ -101,7 +103,7 @@ SeeMe.prototype = {
 };
 
 (function() {
-  SeeMe.loadjQuery(SeeMe.init);
-  SeeMe.appendArrows();
+  var s = new SeeMe();
+  s.loadjQuery(s.init);
 })();
 
