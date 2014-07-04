@@ -98,7 +98,7 @@ SeeMe.prototype = {
     this.repositionImage($newImg);
   },
 
-  repositionImage: function($image) {
+  repositionImage: function(image) {
     var ratio = image.width / image.height;
     console.log(image);
 
@@ -112,13 +112,12 @@ SeeMe.prototype = {
     } else {
       diff = this.defaultSize.height / image.height;
       height = this.defaultSize.height;
-      console.log(diff);
       width = image.width * diff;
     }
 
     console.log(diff, this.defaultSize.width, width, this.defaultSize.height, height, image.width, image.height);
 
-    $image.css({
+    $(image).css({
       'position' : 'absolute',
       'left' : (this.defaultSize.width / 2) - (width / 2),
       'top' : (this.defaultSize.height / 2) - (height / 2),
