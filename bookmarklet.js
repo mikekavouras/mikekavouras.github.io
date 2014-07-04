@@ -186,7 +186,7 @@ SeeMe.prototype = {
     });
 
     for (var i = 0; i < srcs.length; i++) {
-      var img = new Images();
+      var img = new Image();
       img.src = srcs[i];
       this.images.push(img);
     }
