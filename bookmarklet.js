@@ -84,9 +84,16 @@ var SeeMe = {
   },
 
   appendArrows: function() {
+    var $centered = $('<div></div>');
+    $centered.css({ 'width' : '100%', 'text-align' : 'center' });
     var $prev = $('<a href="javascript://">&larr;</a>');
     var $next = $('<a href="javascript://">&rarr;</a>');
-    $('#seeme-cell').append($prev).append($next);
+
+    $prev.css({'display' : 'inline-block', 'padding: 10px 20px' });
+    $next.css({'display' : 'inline-block', 'padding: 10px 20px' });
+
+    $centered.append($prev).append($next);
+    $('#seeme-cell').append($centered);
   }
 };
 
