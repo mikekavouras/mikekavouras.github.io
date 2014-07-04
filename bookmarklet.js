@@ -182,7 +182,7 @@ SeeMe.prototype = {
 
   loadImages: function() {
     var srcs = $('img').get().map(function(image) {
-      return img.getAttribute('src');
+      return image.getAttribute('src');
     });
 
     for (var i = 0; i < srcs.length; i++) {
