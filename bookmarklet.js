@@ -143,7 +143,9 @@ SeeMe.prototype = {
       'position' : 'absolute',
       'left' : (this.defaultSize.width / 2) - (image.width / 2),
       'top' : (this.defaultSize.height / 2) - (image.height / 2),
-      'max-width' : '10000px'
+      'max-width' : '10000px',
+      'width' : 'auto',
+      'height' : 'auto'
     });
 
     if (image.height > image.width) {
