@@ -1,11 +1,11 @@
 function SeeMe() {
   this.idx = 0;
   this.images = [];
+  this.defaultSize = {width: 500, height: 420};
 }
 
 SeeMe.prototype = {
   init: function() {
-    var imageSize = {width: 500, height: 420};
 
     var $overlay = $('<div></div>');
     $overlay.css({
@@ -42,8 +42,8 @@ SeeMe.prototype = {
     var $div = $('<div></div>');
     $div.css({
       'margin' : '0px auto',
-      'width' : imageSize.width,
-      'height' : imageSize.height,
+      'width' : this.defaultSize.width,
+      'height' : this.defaultSize.height,
       'position' : 'relative',
       'overflow' : 'hidden'
     });
@@ -141,8 +141,8 @@ SeeMe.prototype = {
     var image = $image[0];
     $image.css({
       'position' : 'absolute',
-      'left' : (imageSize.width / 2) - (image.width / 2),
-      'top' : (imageSize.height / 2) - (image.height / 2)
+      'left' : (this.defaultSize.width / 2) - (image.width / 2),
+      'top' : (this.defaultSize.height / 2) - (image.height / 2)
     });
   }
 };
