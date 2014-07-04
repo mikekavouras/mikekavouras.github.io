@@ -255,6 +255,9 @@ SeeMe.prototype = {
 };
 
 (function() {
+  if ($('#seeme-cell').length) {
+    return;
+  }
   var s = new SeeMe();
   var cb = function() {s.init(); };
   s.loadjQuery(cb);
