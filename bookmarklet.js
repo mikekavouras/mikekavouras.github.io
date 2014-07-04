@@ -104,6 +104,7 @@ SeeMe.prototype = {
 
 (function() {
   var s = new SeeMe();
-  s.loadjQuery(s.init);
+  var cb = function() {s.init(); };
+  s.loadjQuery(cb);
 })();
 
