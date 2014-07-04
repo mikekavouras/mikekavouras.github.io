@@ -142,6 +142,8 @@ SeeMe.prototype = {
     var ratio = image.width / image.height;
 
     var diff;
+    var width;
+    var height;
     if (image.height > image.width) {
       diff = this.defaultSize.width / width;
       width = image.widthwidth * diff;
@@ -166,7 +168,7 @@ SeeMe.prototype = {
 (function() {
   var s = new SeeMe();
   var cb = function() {s.init(); };
-  if (typeof($.fn) == 'undefined') {
+  if (typeof(jQuery) == 'undefined') {
     s.loadjQuery(cb);
   } else {
     s.init();
