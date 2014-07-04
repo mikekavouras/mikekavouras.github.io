@@ -139,20 +139,23 @@ SeeMe.prototype = {
 
   repositionImage: function($image) {
     var image = $image[0];
-    $image.css({
-      'position' : 'absolute',
-      'left' : (this.defaultSize.width / 2) - (image.width / 2),
-      'top' : (this.defaultSize.height / 2) - (image.height / 2),
-      'max-width' : '10000px',
-      'width' : 'auto',
-      'height' : 'auto'
-    });
+    width = 'auto';
+    height = 'auto';
 
     if (image.height > image.width) {
-      $image.css('width', '100%');
+      width = this.defaultSize.width;
     } else {
-      $image.css('height', '100%');
+      height = this.defaultSize.height;
     }
+
+    $image.css({
+      'position' : 'absolute',
+      'left' : (this.defaultSize.width / 2) - (width / 2),
+      'top' : (this.defaultSize.height / 2) - (height / 2),
+      'max-width' : '10000px',
+      'width' : width,
+      'height' : height
+    });
   }
 };
 
