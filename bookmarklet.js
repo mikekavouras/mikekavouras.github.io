@@ -62,12 +62,7 @@ SeeMe.prototype = {
     this.$images = $('img')
     var $image = this.$images.first().clone();
 
-    var image = $image[0];
-    $image.css({
-      'position' : 'absolute',
-      'left' : (imageSize.width / 2) - (image.width / 2),
-      'top' : (imageSize.height / 2) - (image.height / 2)
-    });
+    this.repositionImage($image);
 
     $div.append($image);
     $div.append($(tImage));
@@ -139,6 +134,16 @@ SeeMe.prototype = {
   to: function(idx) {
     var $img = $('#seeme-cell').find('img').first();
     $img.attr('src', this.images[i].attr('src'));
+    this.repositionImage($img);
+  },
+
+  repositionImage: function($image) {
+    var image = $image[0];
+    $image.css({
+      'position' : 'absolute',
+      'left' : (imageSize.width / 2) - (image.width / 2),
+      'top' : (imageSize.height / 2) - (image.height / 2)
+    });
   }
 };
 
