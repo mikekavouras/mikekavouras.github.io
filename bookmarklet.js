@@ -130,7 +130,6 @@ SeeMe.prototype = {
 
   repositionImage: function(image) {
     var ratio = image.width / image.height;
-
     var diff;
     var width;
     var height;
