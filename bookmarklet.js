@@ -31,10 +31,11 @@ SeeMe.prototype = {
 
     $inner.append('<img>').append($(tImage));
     $cell.append($inner);
+    $cell.append(this.arrows());
     $table.html($cell).append($close);
     $body.append($table).append($overlay);
 
-    this.appendArrows();
+    this.appendButton();
     this.to(0);
   },
 
@@ -49,10 +50,7 @@ SeeMe.prototype = {
     document.getElementsByTagName('body')[0].appendChild(s);
   },
 
-  appendArrows: function() {
-    var $centered = $('<div></div>');
-    $centered.css({ 'width' : '100%', 'text-align' : 'center' });
-    var $btn = $('<a href="javascript://"><img src="http://mikekavouras.com/pink.png"></a>');
+  arrows: function() {
     var $prev = $('<a href="javascript://">&larr;</a>');
     var $next = $('<a href="javascript://">&rarr;</a>');
 
@@ -67,6 +65,12 @@ SeeMe.prototype = {
 
     $prev.css(styles);
     $next.css(styles);
+  },
+
+  appendButton: function() {
+    var $centered = $('<div></div>');
+    $centered.css({ 'width' : '100%', 'text-align' : 'center' });
+    var $btn = $('<br><a href="javascript://"><img src="http://mikekavouras.com/pink.png"></a>');
     $btn.css('display', 'inline-block');
 
     var self = this;
