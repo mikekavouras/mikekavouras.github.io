@@ -153,7 +153,7 @@ SeeMe.prototype = {
       'zIndex' : '9000',
       'display' : 'table'
     });
-    return div;
+    return $div;
   },
 
   cell: function() {
@@ -164,7 +164,7 @@ SeeMe.prototype = {
       'verticalAlign' : 'middle',
       'display' : 'table-cell'
     });
-    return div;
+    return $div;
   },
 
   inner: function() {
@@ -176,7 +176,7 @@ SeeMe.prototype = {
       'position' : 'relative',
       'overflow' : 'hidden'
     });
-    return div;
+    return $div;
   }
 };
 
