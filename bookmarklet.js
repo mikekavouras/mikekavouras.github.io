@@ -13,6 +13,7 @@ SeeMe.prototype = {
     var $table = this.table();
     var $cell = this.cell();
     var $inner = this.inner();
+    var $close = this.closeButton();
 
     var url = "https://static2.see.me/images/masks/tshirt-overlay-front.png.pagespeed.ce.MXzdR3OCN7.png";
     var tImage = new Image();
@@ -27,7 +28,7 @@ SeeMe.prototype = {
 
     $inner.append('<img>').append($(tImage));
     $cell.append($inner);
-    $table.html($cell);
+    $table.html($cell).append($close);
     $body.append($table).append($overlay);
 
     this.appendArrows();
@@ -174,6 +175,22 @@ SeeMe.prototype = {
       'height' : this.defaultSize.height,
       'position' : 'relative',
       'overflow' : 'hidden'
+    });
+    return $div;
+  },
+
+  closeButton: function() {
+    var $div = $('<div></div>');
+    $div.css({
+      'width' : '70px',
+      'height' : '70px',
+      'position' : 'absolute',
+      'top' : '0px',
+      'right' : '0px',
+      'background-image' : 'https://www.see.me/images/v4/icn-big-x.png.pagespeed.ce.44KZJi43Kw.png',
+      'background-repeat' : 'no-repeat'
+      'background-size' : '100%',
+      'background-position' : 'center center'
     });
     return $div;
   },
