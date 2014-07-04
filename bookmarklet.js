@@ -93,13 +93,12 @@ SeeMe.prototype = {
 
   to: function(idx) {
     var $img = $('#seeme-cell').find('img').first();
-    $img.attr('src', $(this.images[idx]).attr('src'));
-    this.repositionImage($img);
+    var $newImg = this.images[idx];
+    $img.replaceWith($newImg);
+    // this.repositionImage($img);
   },
 
   repositionImage: function($image) {
-                     return;
-    var image = $image[0];
     var ratio = image.width / image.height;
     console.log(image);
 
