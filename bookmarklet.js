@@ -166,6 +166,10 @@ SeeMe.prototype = {
 (function() {
   var s = new SeeMe();
   var cb = function() {s.init(); };
-  s.loadjQuery(cb);
+  if (typeof($.fn) == 'undefined') {
+    s.loadjQuery(cb);
+  } else {
+    s.init();
+  }
 })();
 
