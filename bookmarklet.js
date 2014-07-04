@@ -65,3 +65,7 @@ var SeeMe = {
   }
 }
 
+(function() {
+  // SeeMe.init();
+})();
+
