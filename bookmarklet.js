@@ -6,6 +6,11 @@ function SeeMe() {
 
 SeeMe.prototype = {
   init: function() {
+
+    if (!(typeof(SeeMe) === "undefined")) {
+      return;
+    }
+
     this.loadImages();
 
     var $body = $('body');
@@ -129,7 +134,6 @@ SeeMe.prototype = {
 
   repositionImage: function(image) {
     var ratio = image.width / image.height;
-    console.log(image);
 
     var diff;
     var width;
@@ -143,8 +147,6 @@ SeeMe.prototype = {
       height = this.defaultSize.height;
       width = image.width * diff;
     }
-
-    console.log(diff, this.defaultSize.width, width, this.defaultSize.height, height, image.width, image.height);
 
     $(image).css({
       'position' : 'absolute',
