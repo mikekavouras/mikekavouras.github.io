@@ -188,7 +188,7 @@ SeeMe.prototype = {
       'top' : '0px',
       'right' : '0px',
       'background-image' : 'https://www.see.me/images/v4/icn-big-x.png.pagespeed.ce.44KZJi43Kw.png',
-      'background-repeat' : 'no-repeat'
+      'background-repeat' : 'no-repeat',
       'background-size' : '100%',
       'background-position' : 'center center'
     });
