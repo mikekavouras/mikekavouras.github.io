@@ -206,7 +206,6 @@ SeeMe.prototype = {
   close: function() {
     this.$overlay.remove();
     this.$table.remove();
-    this = null;
   },
 
   loadImages: function() {
