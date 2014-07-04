@@ -130,7 +130,7 @@ SeeMe.prototype = {
 
   to: function(idx) {
     var $img = $('#seeme-cell').find('img').first();
-    $img.attr('src', $(this.images[this.idx]).attr('src'));
+    $img.attr('src', $(this.images[idx]).attr('src'));
     this.repositionImage($img);
   },
 
