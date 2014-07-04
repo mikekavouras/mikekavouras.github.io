@@ -6,7 +6,7 @@ function SeeMe() {
 
 SeeMe.prototype = {
   init: function() {
-    this.images = $('img');
+    this.loadImages();
 
     var $body = $('body');
     var $overlay = this.overlay()
@@ -98,6 +98,7 @@ SeeMe.prototype = {
   },
 
   repositionImage: function($image) {
+                     return;
     var image = $image[0];
     var ratio = image.width / image.height;
     console.log(image);
@@ -177,6 +178,18 @@ SeeMe.prototype = {
       'overflow' : 'hidden'
     });
     return $div;
+  },
+
+  loadImages: function() {
+    var srcs = $('img').get().map(function(image) {
+      return img.getAttribute('src');
+    });
+
+    for (var i = 0; i < srcs.length; i++) {
+      var img = new Images();
+      img.src = srcs[i];
+      this.images.push(img);
+    }
   }
 };
 
