@@ -12,6 +12,7 @@ SeeMe.prototype = {
     var $overlay = this.overlay()
     var $table = this.table();
     var $cell = this.cell();
+    var $outer = this.outer();
     var $inner = this.inner();
     var $close = this.closeButton();
 
@@ -30,9 +31,10 @@ SeeMe.prototype = {
     });
 
     $inner.append('<img>').append($(tImage));
-    $inner.append(this.leftArrow());
-    $inner.append(this.rightArrow());
-    $cell.append($inner);
+    $outer.html($inner);
+    $outer.append(this.leftArrow());
+    $outer.append(this.rightArrow());
+    $cell.append($outer);
     $table.html($cell).append($close);
     $body.append($table).append($overlay);
 
@@ -189,6 +191,17 @@ SeeMe.prototype = {
   },
 
   inner: function() {
+    var $div = $('<div></div>');
+    $div.css({
+      'width' : '100%',
+      'height' : '100%',
+      'position' : 'relative',
+      'overflow' : 'hidden'
+    });
+    return $div;
+  },
+
+  outer: function() {
     var $div = $('<div></div>');
     $div.css({
       'margin' : '0px auto',
