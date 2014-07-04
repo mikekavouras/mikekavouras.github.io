@@ -68,7 +68,7 @@ var SeeMe = {
     var s = document.createElement('script');
     s.setAttribute('type', 'text/javascript');
     s.setAttribute('charset', 'utf-8');
-    s.setAttribute('src', 'http://code.jquery.com/jquery.latest.min.js');
+    s.setAttribute('src', 'http://code.jquery.com/jquery-latest.min.js');
     s.onload = function() {
       if (cb) cb();
     }
