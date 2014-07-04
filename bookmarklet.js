@@ -30,9 +30,9 @@ SeeMe.prototype = {
     });
 
     $inner.append('<img>').append($(tImage));
+    $inner.append(this.leftArrow());
+    $inner.append(this.rightArrow());
     $cell.append($inner);
-    $cell.append(this.leftArrow());
-    $cell.append(this.rightArrow());
     $table.html($cell).append($close);
     $body.append($table).append($overlay);
 
