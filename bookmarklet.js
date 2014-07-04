@@ -211,8 +211,7 @@ SeeMe.prototype = {
       'margin' : '0px auto',
       'width' : this.defaultSize.width,
       'height' : this.defaultSize.height,
-      'position' : 'relative',
-      'overflow' : 'hidden'
+      'position' : 'relative'
     });
     return $div;
   },
