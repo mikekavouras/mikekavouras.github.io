@@ -63,7 +63,7 @@ SeeMe.prototype = {
       'position' : 'absolute',
       'top' : '50%',
       'margin-top' : '-19px',
-      'left' : '-160px'
+      'left' : '-120px'
     }
     $prev.css(styles);
 
@@ -84,9 +84,10 @@ SeeMe.prototype = {
       'position' : 'absolute',
       'top' : '50%',
       'margin-top' : '-19px',
-      'right' : '-160px'
+      'right' : '-120px'
     }
     $next.css(styles);
+    var self = this;
     $next.bind('click', function() {
       self.next();
     });
