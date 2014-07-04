@@ -1,4 +1,7 @@
-var SeeMe = {
+function SeeMe() {
+}
+
+SeeMe.prototype = {
   init: function() {
     var imageSize = {width: 500, height: 420};
 
