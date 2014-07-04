@@ -137,7 +137,8 @@ SeeMe.prototype = {
   },
 
   to: function(idx) {
-    $('#seeme-cell').find('img').first().replaceWith(this.images[idx]);
+    var $img = $('#seeme-cell').find('img').first();
+    $img.attr('src', this.images[i].attr('src'));
   }
 };
 
