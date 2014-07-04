@@ -15,6 +15,9 @@ SeeMe.prototype = {
     var $inner = this.inner();
     var $close = this.closeButton();
 
+    this.$overlay = $overlay;
+    this.$table = $table;
+
     var url = "https://static2.see.me/images/masks/tshirt-overlay-front.png.pagespeed.ce.MXzdR3OCN7.png";
     var tImage = new Image();
     tImage.src = url;
@@ -190,9 +193,20 @@ SeeMe.prototype = {
       'background-image' : "url('https://www.see.me/images/v4/icn-big-x.png.pagespeed.ce.44KZJi43Kw.png')",
       'background-repeat' : 'no-repeat',
       'background-size' : '100%',
-      'background-position' : 'center center'
+      'background-position' : 'center center',
+      'cursor' : 'pointer'
+    });
+    var self = this;
+    $div.bind('click', function() {
+      self.close();
     });
     return $div;
+  },
+
+  close: function() {
+    this.$overlay.remove();
+    this.$table.remove();
+    this = null;
   },
 
   loadImages: function() {
