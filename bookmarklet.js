@@ -66,6 +66,6 @@ var SeeMe = {
 };
 
 (function() {
-  // SeeMe.init();
+  SeeMe.init();
 })();
 
