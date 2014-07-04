@@ -59,8 +59,8 @@ SeeMe.prototype = {
       'z-index' : '8000'
     });
 
-    this.$images = $('img')
-    var $image = this.$images.first().clone();
+    this.images = $('img')
+    var $image = this.images.first().clone();
 
     this.repositionImage($image);
 
