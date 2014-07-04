@@ -9,7 +9,7 @@ SeeMe.prototype = {
     this.images = $('img');
 
     var $body = $('body');
-    var $overlay = this.overylay()
+    var $overlay = this.overlay()
     var $table = this.table();
     var $cell = this.cell();
     var $inner = this.inner();
