@@ -6,47 +6,13 @@ function SeeMe() {
 
 SeeMe.prototype = {
   init: function() {
+    this.images = $('img');
 
-    var $overlay = $('<div></div>');
-    $overlay.css({
-      'width' : '100%',
-      'height' : '100%',
-      'background-color' : 'rgba(0, 0, 0, 0.8)',
-      'position' : 'fixed',
-      'top' : '0px',
-      'left' : '0px',
-      'zIndex' : '8999'
-    });
-
-    var $table = $('<div"></div>');
-    $table.css({
-      'width' : '100%',
-      'height' : '100%',
-      'position' : 'fixed',
-      'top' : '0px',
-      'left' : '0px',
-      'zIndex' : '9000',
-      'display' : 'table'
-    });
-
-    var $cell = $('<div id="seeme-cell"></div>');
-    $cell.css({
-      'width' : '100%',
-      'height' : '100%',
-      'verticalAlign' : 'middle',
-      'display' : 'table-cell'
-    });
-
-    $table.html($cell);
-
-    var $div = $('<div></div>');
-    $div.css({
-      'margin' : '0px auto',
-      'width' : this.defaultSize.width,
-      'height' : this.defaultSize.height,
-      'position' : 'relative',
-      'overflow' : 'hidden'
-    });
+    var $body = $('body');
+    var $overlay = this.overylay()
+    var $table = this.table();
+    var $cell = this.cell();
+    var $inner = this.inner();
 
     var url = "https://static2.see.me/images/masks/tshirt-overlay-front.png.pagespeed.ce.MXzdR3OCN7.png";
     var tImage = new Image();
@@ -59,15 +25,12 @@ SeeMe.prototype = {
       'z-index' : '8000'
     });
 
-    $div.append('<img>');
-    $div.append($(tImage));
+    $inner.append('<img>').append($(tImage));
     $cell.append($div);
-
-    $('body').append($overlay);
-    $('body').append($table);
+    $table.html($cell);
+    $body.append($table).append($overlay);
 
     this.appendArrows();
-
     this.to(0);
   },
 
@@ -163,6 +126,57 @@ SeeMe.prototype = {
       'width' : width,
       'height' : height
     });
+  },
+
+  overlay: function() {
+    var $div = $('<div></div>');
+    $div.css({
+      'width' : '100%',
+      'height' : '100%',
+      'background-color' : 'rgba(0, 0, 0, 0.8)',
+      'position' : 'fixed',
+      'top' : '0px',
+      'left' : '0px',
+      'zIndex' : '8999'
+    });
+    return $div;
+  },
+
+  table: function() {
+    var $div = $('<div"></div>');
+    $div.css({
+      'width' : '100%',
+      'height' : '100%',
+      'position' : 'fixed',
+      'top' : '0px',
+      'left' : '0px',
+      'zIndex' : '9000',
+      'display' : 'table'
+    });
+    return div;
+  },
+
+  cell: function() {
+    var $div = $('<div id="seeme-cell"></div>');
+    $div.css({
+      'width' : '100%',
+      'height' : '100%',
+      'verticalAlign' : 'middle',
+      'display' : 'table-cell'
+    });
+    return div;
+  },
+
+  inner: function() {
+    var $div = $('<div></div>');
+    $div.css({
+      'margin' : '0px auto',
+      'width' : this.defaultSize.width,
+      'height' : this.defaultSize.height,
+      'position' : 'relative',
+      'overflow' : 'hidden'
+    });
+    return div;
   }
 };
 
