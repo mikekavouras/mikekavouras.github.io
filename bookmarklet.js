@@ -94,8 +94,16 @@ SeeMe.prototype = {
     var $prev = $('<a href="javascript://">&larr;</a>');
     var $next = $('<a href="javascript://">&rarr;</a>');
 
-    $prev.css({ 'display' : 'inline-block', 'padding' : '10px 20px' });
-    $next.css({'display' : 'inline-block', 'padding' : '10px 20px' });
+    var styles = {
+      'display' : 'inline-block',
+      'padding' : '10px 20px',
+      'color' : '#fff',
+      'font-size' : '30px',
+      'margin' : '0px 30px'
+    }
+
+    $prev.css(styles);
+    $next.css(styles);
 
     $centered.append($prev).append($next);
     $('#seeme-cell').append($centered);
