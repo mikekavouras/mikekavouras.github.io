@@ -26,7 +26,7 @@ SeeMe.prototype = {
     });
 
     $inner.append('<img>').append($(tImage));
-    $cell.append($div);
+    $cell.append($inner);
     $table.html($cell);
     $body.append($table).append($overlay);
 
