@@ -82,7 +82,7 @@ SeeMe.prototype = {
     var $btn = $('<br><a href="javascript://"><img src="http://mikekavouras.com/pink.png"></a>');
     $btn.css('display', 'inline-block');
 
-    $centered.append($prev).append($next).append($btn);
+    $centered.append($btn);
     $('#seeme-cell').append($centered);
   },
 
