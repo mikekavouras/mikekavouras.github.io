@@ -139,7 +139,7 @@ SeeMe.prototype = {
 
   repositionImage: function($image) {
     var image = $image[0];
-    var ratio = width / height;
+    var ratio = image.width / image.height;
 
     var diff;
     if (image.height > image.width) {
