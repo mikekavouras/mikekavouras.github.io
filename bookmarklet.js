@@ -65,13 +65,6 @@ SeeMe.prototype = {
 
     $prev.css(styles);
     $next.css(styles);
-  },
-
-  appendButton: function() {
-    var $centered = $('<div></div>');
-    $centered.css({ 'width' : '100%', 'text-align' : 'center' });
-    var $btn = $('<br><a href="javascript://"><img src="http://mikekavouras.com/pink.png"></a>');
-    $btn.css('display', 'inline-block');
 
     var self = this;
     $prev.bind('click', function() {
@@ -80,6 +73,14 @@ SeeMe.prototype = {
     $next.bind('click', function() {
       self.next();
     });
+
+  },
+
+  appendButton: function() {
+    var $centered = $('<div></div>');
+    $centered.css({ 'width' : '100%', 'text-align' : 'center' });
+    var $btn = $('<br><a href="javascript://"><img src="http://mikekavouras.com/pink.png"></a>');
+    $btn.css('display', 'inline-block');
 
     $centered.append($prev).append($next).append($btn);
     $('#seeme-cell').append($centered);
