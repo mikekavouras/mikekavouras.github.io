@@ -31,7 +31,8 @@ SeeMe.prototype = {
 
     $inner.append('<img>').append($(tImage));
     $cell.append($inner);
-    $cell.append(this.arrows());
+    $cell.append(this.leftArrow());
+    $cell.append(this.rightArrow());
     $table.html($cell).append($close);
     $body.append($table).append($overlay);
 
@@ -50,10 +51,8 @@ SeeMe.prototype = {
     document.getElementsByTagName('body')[0].appendChild(s);
   },
 
-  arrows: function() {
+  leftArrow: function() {
     var $prev = $('<a href="javascript://">&larr;</a>');
-    var $next = $('<a href="javascript://">&rarr;</a>');
-
     var styles = {
       'display' : 'inline-block',
       'padding' : '10px 20px',
@@ -62,18 +61,30 @@ SeeMe.prototype = {
       'margin' : '0px 30px',
       'text-decoration' : 'none'
     }
-
     $prev.css(styles);
-    $next.css(styles);
 
     var self = this;
     $prev.bind('click', function() {
       self.prev();
     });
+    return $prev;
+  },
+
+  rightArrow: function() {
+    var $next = $('<a href="javascript://">&rarr;</a>');
+    var styles = {
+      'display' : 'inline-block',
+      'padding' : '10px 20px',
+      'color' : '#fff',
+      'font-size' : '30px',
+      'margin' : '0px 30px',
+      'text-decoration' : 'none'
+    }
+    $next.css(styles);
     $next.bind('click', function() {
       self.next();
     });
-
+    return $next;
   },
 
   appendButton: function() {
