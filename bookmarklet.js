@@ -63,7 +63,7 @@ var SeeMe = {
     $('body').append($overlay);
     $('body').append($table);
   }
-}
+};
 
 (function() {
   // SeeMe.init();
