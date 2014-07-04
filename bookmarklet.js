@@ -145,11 +145,11 @@ SeeMe.prototype = {
     var width;
     var height;
     if (image.height > image.width) {
-      diff = this.defaultSize.width / width;
+      diff = this.defaultSize.width / image.width;
       width = this.defaultSize.width;
       height = image.height * diff;
     } else {
-      diff = this.defaultSize.height / height;
+      diff = this.defaultSize.height / image.height;
       height = this.defaultSize.height;
       width = image.width * diff;
     }
