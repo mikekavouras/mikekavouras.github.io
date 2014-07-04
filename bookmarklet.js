@@ -60,7 +60,7 @@ var SeeMe = {
     $image.css({
       'position' : 'absolute',
       'left' : (imageSize.width / 2) - (image.width / 2),
-      'top' : (imageSize.height / 2) - image.height / 2)
+      'top' : (imageSize.height / 2) - (image.height / 2)
     });
 
     $div.append($image);
