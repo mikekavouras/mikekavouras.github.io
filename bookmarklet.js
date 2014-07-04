@@ -142,7 +142,7 @@ SeeMe.prototype = {
     $image.css({
       'position' : 'absolute',
       'left' : (this.defaultSize.width / 2) - (image.width / 2),
-      'top' : (this.defaultSize.height / 2) - (image.height / 2)
+      'top' : (.height / 2) - (image.height / 2)
     });
   }
 };
