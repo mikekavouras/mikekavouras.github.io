@@ -144,6 +144,12 @@ SeeMe.prototype = {
       'left' : (this.defaultSize.width / 2) - (image.width / 2),
       'top' : (this.defaultSize.height / 2) - (image.height / 2)
     });
+
+    if (image.height > image.width) {
+      $image.css('width', '100%');
+    } else {
+      $image.css('height', '100%');
+    }
   }
 };
 
