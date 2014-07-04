@@ -59,12 +59,7 @@ SeeMe.prototype = {
       'z-index' : '8000'
     });
 
-    this.images = $('img')
-    var $image = this.images.first().clone();
-
-    this.repositionImage($image);
-
-    $div.append($image);
+    $div.append('<img>');
     $div.append($(tImage));
     $cell.append($div);
 
@@ -72,6 +67,8 @@ SeeMe.prototype = {
     $('body').append($table);
 
     this.appendArrows();
+
+    this.to(0);
   },
 
   loadjQuery: function(cb) {
@@ -151,6 +148,7 @@ SeeMe.prototype = {
     } else {
       diff = this.defaultSize.height / image.height;
       height = this.defaultSize.height;
+      console.log(diff);
       width = image.width * diff;
     }
 
