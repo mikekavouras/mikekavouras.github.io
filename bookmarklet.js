@@ -125,7 +125,7 @@ SeeMe.prototype = {
     if (this.idx < 0) {
       this.idx = this.images.length - 1;
     }
-    to(this.idx);
+    this.to(this.idx);
   },
 
   next: function() {
@@ -133,7 +133,7 @@ SeeMe.prototype = {
     if (this.idx > this.images.length - 1) {
       this.idx = 0;
     }
-    to(this.idx);
+    this.to(this.idx);
   },
 
   to: function(idx) {
