@@ -254,11 +254,13 @@ SeeMe.prototype = {
 };
 
 (function() {
-  if ($('#seeme-cell').length) {
-    return;
-  }
   var s = new SeeMe();
-  var cb = function() {s.init(); };
+  var cb = function() {
+    if ($('#seeme-cell').length) {
+      return;
+    }
+    s.init();
+  };
   if (typeof jQuery === "undefined") {
     s.loadjQuery(cb);
   } else {
