@@ -87,12 +87,16 @@ a:hover {
 h3.project-title {
   font-weight: 400;
   font-size: 1.75em;
-  margin-bottom: 0.6em;
+  margin-bottom: 0;
   margin-top: 0;
 }
 
 h3.project-title a {
   border-bottom: 0;
+}
+
+.project-link {
+  padding-top: 1em;
 }
 
 .project:last-child {
@@ -119,7 +123,7 @@ h3.project-title a {
 
 .technology {
   font-family: "inconsolata",sans-serif;;
-  color: #4F5257;
+  color: #6A6F76;
 }
 
 .pudge {
@@ -131,7 +135,7 @@ h3.project-title a {
 }
 
 .social {
-  margin-bottom: 20em;
+  margin-bottom: 10em;
   margin-top: 4em;
 }
 
