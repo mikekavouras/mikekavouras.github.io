@@ -82,6 +82,7 @@ a:hover {
   border-bottom-color: #111;
   border-right-color: #111;
   border-bottom: 2px;
+  border-right: 2px;
 }
 
 h3.project-title {
