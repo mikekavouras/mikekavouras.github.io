@@ -95,6 +95,17 @@ h3.project-title a {
   border-bottom: 0;
 }
 
+.icon {
+  background-size: 20px 20px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+}
+
+.chrome {
+  background-image: url('../images/chrome.png');
+  background-position: left center;
+}
+
 .project-link {
   padding-top: 1em;
 }
@@ -138,6 +149,3 @@ h3.project-title a {
   margin-bottom: 10em;
   margin-top: 4em;
 }
-
-
-
