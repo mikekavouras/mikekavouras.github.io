@@ -1,5 +1,16 @@
 body {
-  background-color: black;
+  background-color: #020308;
+  background-image: url('../images/plutohires.jpg');
+  background-size: 140%;
+  background-position: center 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-position: center 500px;
+  }
 }
 
 .container {
@@ -80,7 +91,6 @@ a:hover {
   border-top-color: white;
   border-left-color: white;
   border-bottom-color: black;
-  border-right-color: black;
   border-bottom: 2px;
 }
 
@@ -120,7 +130,6 @@ h3.project-title a {
 
 .projects {
   margin-bottom: 6em;
-  border-right: 1px solid white;
 }
 
 .project {
