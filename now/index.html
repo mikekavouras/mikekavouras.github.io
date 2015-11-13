@@ -21,14 +21,72 @@
 
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
 
 <div class="container">
-  What I'm doing now...
+  <div class="row">
+    <div class="col-xs-2 hidden-xs">
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <h2>Teaching</h2>
+      <p>
+        Since the end of May I've been training 32 individuals to become competitive mobile developers though an program called
+        <a href="#">Access Code</a>. For most of them this was their first time experiencing code.
+      </p>
+      <ul>
+        <li>Creating curriculum, which can be found <a href="http://accesscode-2-2.github.io">here</a></li>
+        <li>Creating exercises</li>
+        <li>Creating/grading assignments/assessments</li>
+      </ul>
+
+      <img src="../images/teaching1.jpg" width="100%" alt="teaching" />
+      <br>
+      <br>
+      <img src="../images/teaching2.jpg" width="100%" alt="teaching" />
+      <br>
+      <br>
+      <img src="../images/teaching3.jpg" width="100%" alt="teaching" />
+
+      <h2>Project Euler</h2>
+      <p>
+        <a href="http://projecteuler.net">Project Eueler</a> is a list of 523 CS problems. As a self-taught programmer, this is a great way
+        for me to learn/practice the computer science concepts I was never formally taught. My solutions are in a Swift playground and
+        can be found <a href="https://github.com/mikekavouras/project-euler">on GitHub</a>.
+      </p>
+      <br>
+      <img src="../images/euler.png" width="100%" />
+
+      <hr>
+
+      <h2>C4Q Tools</h2>
+      <p>
+        One of my primary initiatives at <a href="http://c4q.nyc">Coaltion for Queens</a> is building out two part internal system.
+        For context, most of our C4Q data lives in a <strong>massive</strong> Google Drive. Within my first few days I was
+        completely overwhelmed.
+      </p>
+      <p>
+        One thing that weighed heavily on my decision was that Google had already built a robust set of data collection tools. I was
+        <strong>not</strong> trying to recreate this.
+      </p>
+      <p>
+        <strong>Enter <a href="https://developers.google.com/apps-script/?hl=en">Google App Scripts</a></strong>
+      </p>
+      <p>
+        I was previously unaware of Google App Scripts. The idea is simple; write a bit of JavaScript and bind it to some app specific events (eg. submitting a form or
+        changing the value of a spreadsheet cell). The solution was to create hooks that would extract relevant data, format it, and send it directly to our servers.
+        This meant that the organization wouldn't have to change its workflow in order to benefit from this new system.
+      </p>
+
+      <img src="../images/animation.gif" width="100%" alt="animation" />
+
+    </div>
+    <div class="col-xs-2 hidden-xs">
+    </div>
+  </div>
+
 </div>
 
 <script src="scripts/script.js"></script>
