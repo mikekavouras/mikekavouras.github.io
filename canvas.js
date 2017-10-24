@@ -4,12 +4,13 @@ canvas.height = window.innerHeight;
 
 
 var pos = {x: 0, y: 0}
+var size = 8
 
 function drawShape() {
   var ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  var x = Math.floor(Math.random() * (window.innerWidth - 8));
-  var y = Math.floor(Math.random() * (window.innerHeight - 8));
+  var x = Math.floor(Math.random() * (window.innerWidth - size));
+  var y = Math.floor(Math.random() * (window.innerHeight - size));
   ctx.fillRect(x, y, 8, 8);
 
   pos = {x: x, y: y}
@@ -23,7 +24,7 @@ canvas.addEventListener("mousemove", function(e) {
   var distX = Math.abs(x - pos.x) - 4
   var distY = Math.abs(y - pos.y) - 4
 
-  if (distX < 6 && distY < 6) {
+  if (distX < 10 && distY < 10) {
     drawShape();
   }
 });
