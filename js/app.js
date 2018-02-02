@@ -13,7 +13,7 @@ function setup(){
 
 function draw(){
   var size = 400;
-  background(255);
+  background(0);
   texture(vid);
   push();
     rotateZ(theta * 0.1);
@@ -23,3 +23,4 @@ function draw(){
   pop();
   theta += 0.05;
 }
+
