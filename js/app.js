@@ -16,11 +16,9 @@ function draw(){
   background(0);
   texture(vid);
   push();
-    rotateZ(theta * 0.1);
-    rotateX(theta * 0.1);
-    rotateY(theta * 0.1);
+    rotateX(-(mouseY * 0.005));
+    rotateY(-(mouseX * 0.005));
     box(size, size, size);
   pop();
-  theta += 0.05;
 }
 
