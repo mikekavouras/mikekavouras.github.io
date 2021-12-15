@@ -8,5 +8,6 @@ html, body {
 body {
   background-image: url('../images/fish.jpeg');
   background-size: cover;
+  background-position: center center;
 }
 
