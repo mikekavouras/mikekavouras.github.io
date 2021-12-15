@@ -5,47 +5,8 @@ html, body {
   background-color: black;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+body {
+  background-image: url('../images/fish.jpeg');
+  background-size: cover;
 }
 
-img {
-  animation: glow 5s infinite ease-in-out;
-  width: 500px;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 0 10px blueviolet;
-  }
-
-  20% {
-    box-shadow: 0px 50px 0 20px blueviolet,
-                0 0 0 30px yellow;
-  }
-
-  40% {
-    box-shadow: 0px 100px 0 20px blueviolet,
-                200px 0 0 30px yellow,
-                -30px -115px 0 10px green;
-  }
-
-  70% {
-    box-shadow: -40px 30px 0 20px blueviolet,
-                160px 140px 0 30px yellow,
-                -200px -115px 0 10px green,
-                180px -46px 0 40px red;
-  }
-
-  100% {
-    box-shadow: 0 0 0 10px blueviolet;
-  }
-}
-
-
-@media screen and (max-width: 400px) {
-  img { width: 300px; }
-}
